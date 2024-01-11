@@ -2,9 +2,9 @@ import isValidLuhn from "./luhnAlgorithm";
 import cardsDict from "../../js/cards";
 
 export default class cardsValidatorWidget {
-  constructor(element) {
+  constructor(element, answerContainer ) {
     this.element = element;
-    this.answerContainer = document.querySelector(".answer-container");
+    this.answerContainer = answerContainer;
 
     this.onSubmit = this.onSubmit.bind(this);
     this.onFilter = this.onFilter.bind(this);
