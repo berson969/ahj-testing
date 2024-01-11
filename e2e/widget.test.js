@@ -1,6 +1,7 @@
 import puppeteer from "puppeteer";
 import { afterAll, beforeAll, describe, jest, test } from "@jest/globals";
 import { fork } from 'child_process';
+require('dotenv').config();
 
 jest.setTimeout(30000); // default puppeteer timeout
 
@@ -8,7 +9,7 @@ describe('Credit Card Validator form', () => {
   let browser = null;
   let page = null;
   let server = null;
-  const baseUrl = 'http://localhost:8999';
+  const baseUrl = process.env.baseUrl || 'http://localhost:8999';
 
   beforeAll(async () => {
     server = fork(`${__dirname}/e2e.server.js`);
