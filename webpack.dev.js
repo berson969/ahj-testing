@@ -9,9 +9,9 @@ module.exports = merge(common, {
   devtool: "inline-source-map",
 
   // Spin up a server for quick development
-  // fix server port 8999
+  // fix server port 8080
   devServer: {
-    port: 8999,
+    port: 8080,
     historyApiFallback: true,
     open: true,
     compress: true,

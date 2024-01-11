@@ -2,7 +2,7 @@ import isValidLuhn from "./luhnAlgorithm";
 import cardsDict from "../../js/cards";
 
 export default class cardsValidatorWidget {
-  constructor(element, answerContainer ) {
+  constructor(element, answerContainer) {
     this.element = element;
     this.answerContainer = answerContainer;
 

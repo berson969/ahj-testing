@@ -9,7 +9,8 @@ describe('Credit Card Validator form', () => {
   let browser = null;
   let page = null;
   let server = null;
-  const baseUrl = process.env.baseUrl || 'http://localhost:8999';
+  // const baseUrl = process.env.baseUrl || 'http://localhost:8999';
+  const baseUrl = 'https://berson969.github.io/ahj-testing/'
 
   beforeAll(async () => {
     server = fork(`${__dirname}/e2e.server.js`);
@@ -33,6 +34,7 @@ describe('Credit Card Validator form', () => {
   afterAll(async () => {
     await browser.close();
     server.kill();
+    // process.exit(0);
   });
 
   test('should add do something', async () => {
